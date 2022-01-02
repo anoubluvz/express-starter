@@ -1,5 +1,6 @@
 {
     "PORT": 1337,
     "SESSION_SECRET": "WFNIOAWONIFNIOAWFIONAWINOFAINOWFINO!*@*(38-!#*_8-80+SDJ)+AFJ)+QJ)+WFJ+AWFJ(+",
-    "PRODUCTION": false
+    "PRODUCTION": false,
+    "MONGO_URI": "mongodb+srv://admin:2E3j2Ra2T3z2PNnJ@cluster0.wkuq0.gcp.mongodb.net/express-comeback?retryWrites=true&w=majority"
 }

@@ -1,13 +1,15 @@
+// Environment variables
+const config = require("./config.json");
+
 const express = require("express");
+const monk = require("monk")(config.MONGO_URI);
 
 // Middleware imports
 const helmet = require("helmet");
 const morgan = require("morgan");
 const session = require("express-session");
 const cors = require("cors");
-
-// Environment variables
-const config = require("./config.json");
+const MongoStore = require("connect-mongo");
 
 const app = express();
 
@@ -21,7 +23,11 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
     cookie: { secure: config.PRODUCTION },
-    name: "_session_uuid"
+    name: "_session_uuid",
+    store: new MongoStore({
+        collectionName: "sessions",
+        mongoUrl: config.MONGO_URI
+    })
 }));
 
 // Route handling
