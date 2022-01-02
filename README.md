@@ -7,3 +7,7 @@ An express backend starter project with sessions and a routes handler + basic se
 * Helmet
 * Morgan
 * Express-Session
+
+* MongoDB
+* Monk
+* YupJS for Schema Validation
