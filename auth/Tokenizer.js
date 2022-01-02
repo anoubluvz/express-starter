@@ -1,2 +1,2 @@
 const jwt = require("jsonwebtoken");
-const bcrypt = 
+const bcrypt = require("bcryptjs");
